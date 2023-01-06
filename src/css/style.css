@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  /* Primary */
+  --bright-yellow: #c0df34;
+  --cyan: #2ab2af;
+  /* Neutral */
+  --grayish-blue: #98a6bd;
+  --light-gray: #e5eff5;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-size: 16px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#card {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0px 5px 16px 0px rgba(152, 166, 189, 0.57);
+  display: grid;
+  grid-template-areas:
+    "div-top div-top"
+    "div-left div-right";
+  grid-template-columns: auto 330px;
+  grid-template-rows: auto 1fr;
+  width: 660px;
+}
+
+.div-top {
+  background-color: var(--light-gray);
+  border-radius: 8px 8px 0 0;
+  grid-area: div-top;
+  padding: 40px;
+}
+
+.div-top h1 {
+  color: var(--cyan);
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.div-top h2 {
+  color: var(--bright-yellow);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.div-top p {
+  color: var(--grayish-blue);
+  line-height: 24px;
+}
+
+.div-left {
+  background-color: var(--cyan);
+  border-radius: 0 0 0 8px;
+  color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  grid-area: div-left;
+  padding: 40px;
+}
+
+.div-left h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.div-left .price {
+  color: rgba(229, 239, 245, 0.659);
+  margin-bottom: 8px;
+}
+
+.div-left .price>span {
+  color: var(--light-gray);
+  font-size: 36px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.div-left .info {
+  margin-bottom: 24px;
+}
+
+.div-left .btn-SignUp {
+  background-color: var(--bright-yellow);
+  border-radius: 8px;
+  box-shadow: 0px 6px 15px -5px rgba(45, 108, 107, 0.65);
+  color: var(--light-gray);
+  font-weight: 700;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.div-left .btn-SignUp:hover,
+.div-left .btn-SignUp:focus {
+  background-color: rgba(192, 223, 52, 0.808);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.div-right {
+  background-color: rgba(42, 178, 176, 0.808);
+  border-radius: 0 0 8px 0;
+  color: var(--light-gray);
+  grid-area: div-right;
+  padding: 40px;
+}
+
+.div-right h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.div-right p {
+  color: rgba(229, 239, 245, 0.659);
+  line-height: 20px;
+}
+
+.attribution {
+  color: var(--grayish-blue);
+  font-size: 11px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--bright-yellow);
+}
+
+@media (width < 670px) {
+  #card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 90%;
+  }
+
+  .div-top h1 {
+    font-size: 20px;
+  }
+
+  .div-top h2 {
+    font-size: 16px;
+  }
+
+  .div-left {
+    border-radius: 0;
+  }
+
+  .div-right {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+@media (width < 400px) {
+
+  .div-top,
+  .div-left,
+  .div-right {
+    padding: 24px;
+  }
+}
