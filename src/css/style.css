@@ -45,7 +45,7 @@ body {
 }
 
 .div-top {
-  background-color: var(--light-gray);
+  background-color: var(--white);
   border-radius: 8px 8px 0 0;
   grid-area: div-top;
   padding: 40px;
